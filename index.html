@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Family Book</title> 
+</head> 
+<body>
+  <center>
+    <h1>My Family Book</h1>
+    <img id="album" src="https://4my3boyz.com/content/images/thumbs/0015333_the-flintstones-prehistoric-stone-age-family-large-cotton-fabric-panel_500.jpeg">
+    <div></div>
+    <br>
+    <p id="name"></p> 
+    <button type="button" onclick="nextslide()">Next </button>
+  </center>
+</body> 
+<script>
+    var names = [
+      "Fred Flintstone",
+      "Wilma Flintstone",
+      "Pebbles Flintstone",
+      "Dino",
+      "Barney Rubble",
+      "Betty Rubble",
+      "Bamm-Bamm Rubble",
+      "My Family Book"
+    ];
+
+    var images = [
+      "https://upload.wikimedia.org/wikipedia/en/a/ad/Fred_Flintstone.png",
+      "https://upload.wikimedia.org/wikipedia/en/9/97/Wilma_Flintstone.png",
+      "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Pebbles_Flintstone.png/155px-Pebbles_Flintstone.png",
+      "https://upload.wikimedia.org/wikipedia/en/f/f7/Dino_from_%22The_Flintstones%22.gif",
+      "https://upload.wikimedia.org/wikipedia/en/e/e2/Barney_Rubble.png",
+      "https://upload.wikimedia.org/wikipedia/en/5/5e/Betty_Rubble.png",
+      "https://upload.wikimedia.org/wikipedia/en/0/0c/Bamm-Bamm_Rubble.png",
+      "https://4my3boyz.com/content/images/thumbs/0015333_the-flintstones-prehistoric-stone-age-family-large-cotton-fabric-panel_500.jpeg",
+    ];
+
+    var i = 0; 
+    function nextslide() { 
+  document.getElementById("name").innerHTML = names[i]; 
+  document.getElementById("album").src = images[i];
+  i++;
+  
+  if (i>9) {
+  i=0;
+}
+
+  }
+</script>
+</html>
